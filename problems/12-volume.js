@@ -24,7 +24,30 @@ console.log(table2(75)); // STILL prints 6
 
 ***********************************************************************/
 
-// your code here
+const recVolume = height => {
+  let volume;
+  let width;
+  let length;
+
+  return dim => {
+    if (width === undefined) {
+      width = dim;
+      return this;
+    } else if (length === undefined) {
+      length = dim;
+      volume = height * width * length;
+      return volume;
+    } else {
+      return volume;
+    }
+  }
+}
+
+
+let table1 = recVolume(5); // returns a function
+console.log(table1(4)); // returns a function
+console.log(table1(3)); // prints 60
+console.log(table1(145)); // STILL prints 60
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 

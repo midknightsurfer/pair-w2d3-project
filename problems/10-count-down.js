@@ -45,6 +45,7 @@ const countDownTimer = n => {
   } 
 }
 
+/*
 console.log(countDownTimer(0));
 
 let oneDay = countDownTimer(1);
@@ -53,6 +54,7 @@ console.log(oneDay());
 let twoDays = countDownTimer(2);
 console.log(twoDays());
 console.log(twoDays());
+*/
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 

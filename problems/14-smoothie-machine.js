@@ -22,7 +22,23 @@ console.log(smoothie2("pineapple"));
 // prints "I'm having a smoothie with apples and bananas and berries and pineapple"
 ***********************************************************************/
 
-// your code here
+let smoothieMachine = (...params) => {
+  let smoothie = `I'm having a smoothie with `;
+
+  return (...params2) => {
+    params = [...params,...params2];
+    return smoothie + params.join(' and ');
+  }
+}
+
+let smoothie1 = smoothieMachine();
+console.log(smoothie1("milk"));
+console.log(smoothie1("strawberries"));
+
+
+let smoothie2 = smoothieMachine("eggs");
+console.log(smoothie2("cheese"));
+console.log(smoothie2("bacon"));
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 try {

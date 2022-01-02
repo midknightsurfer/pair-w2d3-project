@@ -25,7 +25,14 @@ Example 3:
 
 ***********************************************************************/
 
-// your code here
+const coinCollector = numCoins => {
+  let coins = [];
+  return coin => {
+    coins.push(coin);
+    if (coins.length === numCoins) return coins
+    else return this;
+  }
+}
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 

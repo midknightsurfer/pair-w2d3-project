@@ -47,7 +47,7 @@ const curriedSum = numArgs => {
   let _curriedSum = function(num) {
     numbers.push(num);
     console.log(numbers);
-    return ( numbers.length === numArgs ? numbers.reduce( (sum, el) => sum + el ) : _curriedSum );
+    return ( numbers.length === numArgs ? numbers.reduce( (sum, el) => sum + el ) : _curriedSum);
   }
   return _curriedSum;
 }

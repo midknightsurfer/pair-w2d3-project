@@ -29,10 +29,10 @@ const recVolume = height => {
   let width;
   let length;
 
-  return dim => {
+  let func = dim => {
     if (width === undefined) {
       width = dim;
-      return this;
+      return func;
     } else if (length === undefined) {
       length = dim;
       volume = height * width * length;
@@ -41,6 +41,7 @@ const recVolume = height => {
       return volume;
     }
   }
+  return func;
 }
 
 
